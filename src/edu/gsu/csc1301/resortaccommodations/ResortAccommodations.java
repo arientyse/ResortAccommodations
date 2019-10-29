@@ -33,9 +33,29 @@ public class ResortAccommodations {
 			resortFloors = in.nextInt();
 		}
 		
-		for (int floorRooms = 0; floorRooms <= resortFloors; floorRooms++)
+		for (int floor = 1; floor <= resortFloors; floor++)
 		{
+			System.out.print("How many rooms does Floor " + floor + " have? ");
+			int floorRooms = in.nextInt();
 			
+			while (floorRooms < 10)
+			{
+				System.out.print("Invalid. Enter 10 or more: ");
+				floorRooms = in.nextInt();
+			}
+			
+			floorRooms = totalRooms;
+			
+			System.out.print("How many occupied rooms does Floor " + floor + " have? ");
+			int occupiedFloorRooms = in.nextInt();
+			
+			while (occupiedFloorRooms > floorRooms)
+			{
+				System.out.print("Invalid. Exceeds number of rooms on the floor. How many occupied rooms are on Floor " + floor + "?");
+				occupiedFloorRooms = in.nextInt();
+			}
+			
+			 occupiedFloorRooms = totalOccupiedRooms;
 		}
 		
 		
