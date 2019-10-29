@@ -49,21 +49,32 @@ public class ResortAccommodations {
 			System.out.print("How many occupied rooms does Floor " + floor + " have? ");
 			int occupiedFloorRooms = in.nextInt();
 			
-			while (occupiedFloorRooms > floorRooms)
+			while (occupiedFloorRooms > totalRooms)
 			{
-				System.out.print("Invalid. Exceeds number of rooms on the floor. How many occupied rooms are on Floor " + floor + "?");
-				occupiedFloorRooms = in.nextInt();
+				System.out.print("Invalid. Exceeds number of total rooms. How many rooms are on Floor" + floor);
+				occupiedFloorRooms = in.nextInt();	
 			}
 			
 			 occupiedFloorRooms = totalOccupiedRooms;
 		}
 		
+		in.close();
+		
 		
 		//Computation
 		
+		int vacantRooms = totalRooms - totalOccupiedRooms;
 		
+		double percentOccupant = (totalOccupiedRooms/totalRooms) * 100;
 		
 		//Output
+		
+		System.out.println();
+		
+		System.out.println("Number of Floors: " + resortFloors);
+		System.out.println("Occupied Rooms:   " + totalOccupiedRooms);
+		System.out.println("Vacant Rooms:     " + vacantRooms);
+		System.out.printf("Occupancy Rate: %.2f \n", percentOccupant);
 
 	}
 
