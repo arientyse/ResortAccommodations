@@ -24,7 +24,14 @@ public class ResortAccommodations {
 		
 		//Input
 		
+		System.out.print("How many floors does the resort have? ");
+		int resortFloors = in.nextInt();
 		
+		while (resortFloors < 1)
+		{
+			System.out.print("Invalid. Enter 1 or more: ");
+			resortFloors = in.nextInt();
+		}
 		
 		
 		//Computation
