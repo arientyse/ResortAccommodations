@@ -33,8 +33,14 @@ public class ResortAccommodations {
 			resortFloors = in.nextInt();
 		}
 		
+		for (int floorRooms = 0; floorRooms <= resortFloors; floorRooms++)
+		{
+			
+		}
+		
 		
 		//Computation
+		
 		
 		
 		//Output
